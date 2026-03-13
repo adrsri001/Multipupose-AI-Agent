@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Multipurpose AI Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        :root { --primary: #00f5ff; --secondary: #a855f7; }
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .title { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000000 100%); background-size: 300% 300%; animation: gradientShift 15s ease infinite; }
+        @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+        .agent-card { transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 25px 50px -12px rgb(0 245 255 / 0.25); }
+        .neon-text { text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 40px #a855f7; }
+        .glass { background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(0,245,255,0.2); }
+        input:focus { box-shadow: 0 0 20px #00f5ff; border-color: #00f5ff; }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen hero-bg overflow-x-hidden">
+
+<!-- HEADER (same as main site) -->
+<header class="glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center text-3xl">🤖</div>
+            <h1 class="title text-3xl font-semibold tracking-tighter neon-text">Multipurpose AI Agents</h1>
+        </div>
+        <a href="index.html" class="text-cyan-400 hover:text-white font-medium">← Back to Home</a>
+    </div>
+</header>
+
+<div class="pt-32 pb-16 min-h-screen flex items-center justify-center px-6">
+    <div class="agent-card bg-zinc-900/90 border border-cyan-500/30 rounded-3xl p-10 max-w-md w-full backdrop-blur-xl" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+        
+        <div class="text-center mb-8">
+            <div class="mx-auto w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center text-6xl mb-4">🔑</div>
+            <h2 class="title text-4xl font-bold neon-text">Welcome Back</h2>
+            <p class="text-zinc-400 mt-2">Sign in to access your AI agents</p>
+        </div>
+
+<!-- Replace only the <form> part and heading in signup.html -->
+
+<div class="text-center mb-8">
+    <div class="mx-auto w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center text-6xl mb-4">✨</div>
+    <h2 class="title text-4xl font-bold neon-text">Create Account</h2>
+    <p class="text-zinc-400 mt-2">Start using superhuman AI agents in seconds</p>
+</div>
+
+<form id="signupForm" class="space-y-6">
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <label class="block text-sm font-medium mb-2">Full Name</label>
+            <input type="text" id="name" required class="w-full bg-zinc-950 border border-cyan-400/50 rounded-2xl px-5 py-4 focus:outline-none">
+        </div>
+        <div>
+            <label class="block text-sm font-medium mb-2">Username</label>
+            <input type="text" id="username" required class="w-full bg-zinc-950 border border-cyan-400/50 rounded-2xl px-5 py-4 focus:outline-none">
+        </div>
+    </div>
+    
+    <div>
+        <label class="block text-sm font-medium mb-2">Email Address</label>
+        <input type="email" id="email" required class="w-full bg-zinc-950 border border-cyan-400/50 rounded-2xl px-5 py-4 focus:outline-none">
+    </div>
+    
+    <div>
+        <label class="block text-sm font-medium mb-2">Password</label>
+        <div class="relative">
+            <input type="password" id="password" required class="w-full bg-zinc-950 border border-cyan-400/50 rounded-2xl px-5 py-4 focus:outline-none">
+            <button type="button" id="togglePass" class="absolute right-5 top-1/2 -translate-y-1/2 text-2xl">👁️</button>
+        </div>
+    </div>
+
+    <button type="submit"
+            class="neon-button w-full py-5 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-2xl font-semibold text-lg tracking-wider hover:scale-105 transition-all">
+        CREATE ACCOUNT →
+    </button>
+</form>
+
+<div class="text-center mt-8 text-zinc-400">
+    Already have an account? 
+    <a href="login.html" class="text-cyan-400 font-medium hover:underline">Login Here</a>
+</div>
+
+        <div class="text-center mt-8 text-zinc-400">
+            Don't have an account? 
+            <a href="signup.html" class="text-cyan-400 font-medium hover:underline">Sign Up Free</a>
+        </div>
+
+        <div class="flex gap-4 justify-center mt-8">
+            <button class="text-3xl hover:scale-110 transition">𝕏</button>
+            <button class="text-3xl hover:scale-110 transition">📘</button>
+            <button class="text-3xl hover:scale-110 transition">𝕃</button>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-black border-t border-white/10 py-8 text-center text-xs text-zinc-500">
+    © 2025 Multipurpose AI Agents • All rights reserved
+</footer>
+
+<script>
+    // Tailwind + Tilt
+    VanillaTilt.init(document.querySelectorAll(".agent-card"), { max: 15, speed: 400, glare: true, "max-glare": 0.6 });
+
+    // Password toggle
+    const toggle = document.getElementById('togglePass');
+    const passInput = document.getElementById('password');
+    let visible = false;
+    toggle.addEventListener('click', () => {
+        visible = !visible;
+        passInput.type = visible ? 'text' : 'password';
+        toggle.textContent = visible ? '🙈' : '👁️';
+    });
+
+    // Form submit (fake but beautiful)
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button');
+        btn.innerHTML = '🔄 LOGGING IN...';
+        btn.disabled = true;
+        
+        setTimeout(() => {
+            alert('✅ Login Successful! Welcome back to your AI Agents dashboard 🚀');
+            window.location.href = 'index.html';
+        }, 1200);
+    });
+</script>
+</body>
+</html>
